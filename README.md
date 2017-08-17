@@ -1,3 +1,3 @@
-# Django_Project
+# Muypicky
 
 Mini-project using Django
