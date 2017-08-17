@@ -28,14 +28,13 @@ from django.shortcuts import render
 def home(request):
     num = None
     #some_list = [1,2,3,4,5,6,7,8,9]
-
+    #some_list = []
     some_list = [
         random.randint(0, 3321),
         random.randint(0, 3321),
         random.randint(0, 3321)
     ]
 
-    #some_list = []
     condition_bool_item = True
 
     if condition_bool_item:
@@ -46,4 +45,22 @@ def home(request):
         "some_list": some_list
     }
 
-    return render(request, "base.html", context)
+    return render(request, "home.html", context)
+
+
+def about(request):
+
+    context = {
+
+    }
+
+    return render(request, "about.html", context)
+
+
+def contact(request):
+
+    context = {
+
+    }
+
+    return render(request, "contact.html", context)
