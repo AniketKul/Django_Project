@@ -26,13 +26,22 @@ from django.shortcuts import render
 #     #return render(request, "home.html", {})#response
 
 def home(request):
-    num = random.randint(0, 3321)
+    num = None
     #some_list = [1,2,3,4,5,6,7,8,9]
-    some_list = [num, random.randint(0, 3321), random.randint(0, 3321)]
+
+    some_list = [
+        random.randint(0, 3321),
+        random.randint(0, 3321),
+        random.randint(0, 3321)
+    ]
+
     #some_list = []
+    condition_bool_item = True
+
+    if condition_bool_item:
+        num = random.randint(0, 3321)
 
     context = {
-        "bool_item": True,
         "num": num,
         "some_list": some_list
     }

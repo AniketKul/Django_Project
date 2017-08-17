@@ -8,7 +8,7 @@
           This is {{ bool_item }} coming through
         </p>
         <p>
-          {% if bool_item %}
+          {% if num is not None%}
           Random number is {{ num }}
           {% endif %}
           {% comment %} This is a comment {% endcomment %}
