@@ -27,4 +27,14 @@ from django.shortcuts import render
 
 def home(request):
     num = random.randint(0, 3321)
-    return render(request, "base.html", {"html_var":"CONTEXT VARIABLE SUBSTITUTION", "num":num})
+    #some_list = [1,2,3,4,5,6,7,8,9]
+    some_list = [num, random.randint(0, 3321), random.randint(0, 3321)]
+    #some_list = []
+
+    context = {
+        "bool_item": True,
+        "num": num,
+        "some_list": some_list
+    }
+
+    return render(request, "base.html", context)
